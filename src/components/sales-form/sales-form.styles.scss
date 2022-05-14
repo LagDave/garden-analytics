@@ -1,0 +1,17 @@
+.sales-form-container{
+  max-width: 30%;
+  background:white;
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 0 -8px 27px rgba(0,0,0,.05);
+
+  h2{
+    margin:0 0 20px 0;
+    color: #494949;
+  }
+  #sales-form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+}
