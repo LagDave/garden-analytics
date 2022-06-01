@@ -3,7 +3,8 @@ import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   doc,
-  setDoc
+  setDoc,
+  query, collection, onSnapshot
 } from "firebase/firestore";
 
 import {v4 as uuidv4} from "uuid";
@@ -30,4 +31,8 @@ export const createSalesData = async (salesData) => {
   .catch((e) => {
     console.error(e.code)
   })
+}
+
+export const onSalesChangedListener = (vegetable, callback) => {
+  onSnapshot(collection(db, `vegetables/${vegetable}/sales`), callback);
 }
